@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Portfolio Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <!-- Updated About Section -->
+  <section id="about" class="active">
+    <h1>Hi, I'm Ankit Kumar</h1>
+    <p>Web developer passionate about building responsive and interactive websites.</p>
+
+    <h2>🎓 Education</h2>
+    <p><strong>College:</strong> Government Engineering College, Palamu (GEC Palamu)</p>
+    <p><strong>Degree:</strong> B.Tech in Computer Science and Engineering</p>
+    <p><strong>Status:</strong> 2nd Year, 4th Semester</p>
+  </section>
+
+  <section id="projects" class="hidden">
+    <h1>Projects</h1>
+
+    <h2>📝 To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+
+    <h2>🛍️ Product Listing</h2>
+    <label>Category:
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="tech">Tech</option>
+        <option value="fashion">Fashion</option>
+      </select>
+    </label>
+
+    <label>Sort by Rating:
+      <select id="sortRating">
+        <option value="high">High to Low</option>
+        <option value="low">Low to High</option>
+      </select>
+    </label>
+
+    <ul id="productList"></ul>
+  </section>
+
+  <section id="contact" class="hidden">
+    <h1>Contact Me</h1>
+    <p>Email: ankit@example.com</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
